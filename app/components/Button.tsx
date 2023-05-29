@@ -22,9 +22,11 @@ const Button:React.FC<ButtonProps> = ({label, onClick, disabled, outline,small,i
     ${outline?'bg-white border-black text-black':'bg-rose-500 text-white border-rose-500'}
     ${small?'py-1 text-sm border-[1px]':'py-3 text-md border-2'}
     `}
+
+    onClick={onClick}
     >
         {Icon && (
-          <Icon size={18}/>
+          <Icon size={24} className='absolute left-4'/>
         )}
         {label}
     </button>
